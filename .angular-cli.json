@@ -19,9 +19,20 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/videogular2/fonts/videogular.css", 
+        "../node_modules/sweetalert2/src/sweetalert2.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../src/assets/libs/jquery-mask/dist/jquery.mask.min.js",
+        "../node_modules/slideout/dist/slideout.min.js",
+        "../node_modules/crypto-js/crypto-js.js",
+        "../node_modules/sweetalert2/dist/sweetalert2.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
