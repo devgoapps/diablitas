@@ -18,6 +18,9 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 // Router
 import { AppRoutingModule } from './app.routing';
 
+// Auth Guard
+import { AuthGuard } from './services/auth.guard';
+
 // Pipes
 import { SafedomPipe } from './pipes/safedom.pipe';
 
@@ -76,6 +79,7 @@ import { ActivationComponent } from './components/activation/activation.componen
     HttpService,
     SessionService,
     SweetAlertService,
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptorService,

@@ -249,7 +249,6 @@ export class EditableProfileComponent implements OnInit {
     }
   }
 
-
   goToImportant(){
     let text;
     if(this.tab == 'detail')

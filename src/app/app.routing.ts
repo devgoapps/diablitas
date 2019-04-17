@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// Auth Guard
+import { AuthGuard } from './services/auth.guard';
+
 // Components
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -12,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'ad', component: ProfileComponent },
-  { path: 'profile', component: EditableProfileComponent },
+  { path: 'profile/:id', component: EditableProfileComponent, canActivate: [AuthGuard] },
   { path: 'activation/:token', component: ActivationComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
